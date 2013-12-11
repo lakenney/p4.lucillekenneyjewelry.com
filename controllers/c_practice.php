@@ -128,6 +128,21 @@ class practice_controller extends base_controller {
 	-------------------------------------------------------------------------------------------------*/
 	public function test_db() {
 	
+		//$q = 'INSERT INTO products
+			//SET product_code = "cha",
+			//product_name = "chain"';
+
+			//echo $q;
+
+		//DB::instance(DB_NAME)->query($q);
+
+		$q = 'UPDATE products
+			SET product_name = "rice chain"
+			WHERE product_code = "cha"';
+
+		DB::instance(DB_NAME)->query($q);
+			
+
 	// Notes: protect against sql injection attachs
 	// INSERT PRACTICE
 	/*$q = 'INSERT INTO users
@@ -161,19 +176,19 @@ class practice_controller extends base_controller {
 	
 	
 	// Lets pretend this is data we got from a form
-	$_POST['first_name'] = 'Albert';
+	//$_POST['first_name'] = 'Albert';
 	
 	//Make sure it's sanitized first
-	$_POST = DB::instance(DB_NAME)->sanitize($_POST);
+	//$_POST = DB::instance(DB_NAME)->sanitize($_POST);
 	
-	$q = 'SELECT email
-			FROM users
-			WHERE first_name = "'.$_POST['first_name'].'"';
+	//$q = 'SELECT email
+			//FROM users
+			//WHERE first_name = "'.$_POST['first_name'].'"';
 	// echo a query is a useful debugging technique
-	echo $q;
+	//echo $q;
 		
 	// Run the query, echo what it returns	
-	echo DB::instance(DB_NAME)->select_field($q);
+	//echo DB::instance(DB_NAME)->select_field($q);
 	
 	}
 	

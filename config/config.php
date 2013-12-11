@@ -31,7 +31,7 @@ A email designated to receive messages from the server. Examples:
 	define('SYSTEM_EMAIL', 'webmaster@lucillekenneyjewelry.com'); 
 
 # Default DB name for this app
-	define('DB_NAME', "lucillek_p2_lucillekenneyjewelry_com"); 
+	define('DB_NAME', "lucillek_p4_lucillekenneyjewelry_com"); 
 
 # Timezone
 	define('TIMEZONE', 'America/New_York');
