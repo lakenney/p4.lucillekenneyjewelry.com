@@ -94,7 +94,7 @@
 	<!--<?php if(isset($client_files_body)) echo $client_files_body; ?>-->
 
 		<script type="text/javascript" src="/js/jquery.form.js"> </script>
-		<script type="text/javascript" src="/js/post_add.js"> </script>
+		<!--<script type="text/javascript" src="/js/posts_add.js"> </script>-->
 		<script type="text/javascript" src="/js/posts_control_panel.js"> </script>
 
 </body>

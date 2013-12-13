@@ -172,10 +172,8 @@ class posts_controller extends base_controller {
         // Another view
         #$this->template->content->moreContent = View::instance('v_posts_index'); 
 
-        // Render template
         echo $this->template;
     
-
     
     }
     
@@ -183,12 +181,12 @@ class posts_controller extends base_controller {
     Process new posts
     -------------------------------------------------------------------------------------------------*/    
     public function p_add() {
-
-    	// Check for empty post!!!
-    	
+    
+        // Check for empty post!!!
+            
         // Associate this post with this user
         $_POST['user_id']  = $this->user->user_id;
-            	    
+                        
         // Unix timestamp of when this post was created / modified
         $_POST['created']  = Time::now();
         $_POST['modified'] = Time::now();

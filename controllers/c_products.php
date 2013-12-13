@@ -3,7 +3,7 @@ class products_controller extends base_controller {
 
     public function __construct() {
         parent::__construct();
-        echo "products_controller construct called<br><br>";
+        #echo "products_controller construct called<br><br>";
     } 
 
     public function index() {
