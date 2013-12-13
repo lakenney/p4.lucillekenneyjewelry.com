@@ -35,7 +35,7 @@ class posts_controller extends base_controller {
 			// Pass the $users array to the above view fragment
 			$this->template->content->usersView = View::instance('v_posts_users');        
                 
-    	/**
+    	/*
     	This is the entire steam of posts
     	// Build the query
     	$q = "SELECT 
