@@ -159,15 +159,15 @@ class posts_controller extends base_controller {
     -------------------------------------------------------------------------------------------------*/
     public function add() {
     
-               // Setup view and passed to v_posts_index
-        //$this->template->content         = View::instance('v_posts_add');
+        // Setup view and passed to v_posts_index
+        // $this->template->content         = View::instance('v_posts_add');
 
         $client_files_body = Array(
             '/js/jquery.form.js',
             '/js/posts_add.js'
         );            
 
-            $this->template->client_files_body = Utils::load_client_files($client_files_body);
+        $this->template->client_files_body = Utils::load_client_files($client_files_body);
 
         // Another view
         #$this->template->content->moreContent = View::instance('v_posts_index'); 
@@ -178,7 +178,7 @@ class posts_controller extends base_controller {
     }
     
     /*-------------------------------------------------------------------------------------------------
-    Process new posts
+    Process new posts ajax method
     -------------------------------------------------------------------------------------------------*/    
     public function p_add() {
     

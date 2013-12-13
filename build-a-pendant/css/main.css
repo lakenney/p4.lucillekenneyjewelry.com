@@ -121,8 +121,8 @@
 
   /* Left column */
   #controls {
-  	width:380px;
-  	margin-right:50px;
+  	width:350px;
+  	margin-right:40px;
   	float:left;
   }
 
@@ -158,7 +158,7 @@
   }
 
   #canvas {
-    background-image:url(../images/preview-background.jpg);
+    background-image:url(/build-a-pendant/images/preview-background.jpg);
   	/*opacity: 0.2; filter: alpha(opacity=50);
     background-repeat:no-repeat;  border: solid 2px red;*/
     width:338px;

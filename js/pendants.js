@@ -1,6 +1,6 @@
 var options = {
     type: 'POST',
-    url: '/posts/p_pendants/',
+    url: '/pendants/p_build/',
     beforeSubmit: function() {
         $('#results').html("Adding...");
     },

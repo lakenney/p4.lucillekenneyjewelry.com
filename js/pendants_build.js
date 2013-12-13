@@ -2,10 +2,10 @@ var options = {
     type: 'POST',
     url: '/pendants/p_build/',
     beforeSubmit: function() {
-        $('#results').html("Pendants!!!...");
+        $('#results').html("Hello Pendants");
     },
     success: function(response) {   
-        $('#results').html(response);
+        $('#results').html('this is working!!!');
     } 
 }; 
 

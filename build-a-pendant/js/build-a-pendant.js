@@ -31,7 +31,7 @@ $(document).ready(function() {
 	    //console.log('radio clicked');
 
 	    // Concatenate 3 selected variables into an image url
-	    var imageURL = "images/" + shapes + "-" + size + "-" + metals + ".png";
+	    var imageURL = "/build-a-pendant/images/" + shapes + "-" + size + "-" + metals + ".png";
 	    //console.log(imageURL);
 
 	    // Place the concatenated image string into image src
@@ -489,12 +489,12 @@ $(document).ready(function() {
 	    
 	    // (Note the += symbol is used to add content onto an existing variable, so basically we're just adding onto our new_tab_contents variable one line at a time)
 	    new_tab_contents += '<head>';
-	    new_tab_contents += '<link rel="stylesheet" href="css/main.css" type="text/css">'; // Don't forget your CSS so the card looks good in the new tab!
-	    new_tab_contents += '<link rel="stylesheet" href="css/features.css" type="text/css">';
+	    new_tab_contents += '<link rel="stylesheet" href="/build-a-pendant/css/main.css" type="text/css">'; // Don't forget your CSS so the card looks good in the new tab!
+	    new_tab_contents += '<link rel="stylesheet" href="/build-a-pendant/css/features.css" type="text/css">';
 	    new_tab_contents += '</head>';
 	    new_tab_contents += '<body>'; 
 	    new_tab_contents += canvas; // Here's where we add the pendant to our HTML for the new tab
-	    //new_tab_contents += pendant; // Here's where we add pendant css to center to text to our HTML for the new tab
+	    //new_tab_contents += pendant-container; // Here's where we add pendant css to center to text to our HTML for the new tab
 	    new_tab_contents += '</body></html>';
 	    
 		// Ok, our card is ready to go, we just need to work on opening the tab

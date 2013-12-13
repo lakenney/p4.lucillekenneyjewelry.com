@@ -1,22 +1,32 @@
-	<!--<form method='POST' action='/pendants/p_build'>
-    	<label for='content'>Pendants</label><br>
-    	<textarea  cols="53" rows="8" name='content' id='content'></textarea>
-    
-    		<div id='results'></div>
+<!DOCTYPE html>
+<html>
+<head>
 
-    	<input type='submit' value='Pendant'>
-
-	</form>
-
-    <br>-->
-	<!--css-->
-	<!--<link rel="stylesheet" href="/build-a-pendant/css/main.css" type="text/css">
-	<link rel="stylesheet" href="/build-a-pendant/css/features.css" type="text/css">
-	<link rel="stylesheet" href='/build-a-pendant/css/responsive.css'>-->
+	<title>Build a Pendant</title>
 	
-<!--<body id='pendants'>-->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<!--Mobile specific meta goodness :) Ian Yates-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<?php if(isset($client_files_head)) echo $client_files_head; ?>
+	<!--css-->
+	<link rel="stylesheet"  href="../build-a-pendant/css/main.css"
+	<link rel="stylesheet" href="../build-a-pendant/css/features.css" type="text/css">
+	<link rel="stylesheet" href='../build-a-pendant/css/responsive.css'>
+	
+</head>
+
+<body id='products'>
+
+	<div class='wrapper'>
+
+		<header>
+			<h1 class="logo">
+				<a href='../index.html'>Hand Made Jewelry</a>
+			</h1>
+			<!-- responsive nav -->
+			<a class="to_nav" href="#access">Menu</a>
+		</header>
 
 		<h1 class='pendant'>Build a Pendant</h1>
 
@@ -83,7 +93,7 @@
 					<div id='canvas'>
 						<div id='pendant-container'>
 							<div id='pendant'>
-								<img src='/build-a-pendant/images/circle-md-silver.png' width="101" height="101" alt="Medium Round Silver Pendant blank">
+								<img src="images/circle-md-silver.png" width="101" height="101" alt="Medium Round Silver Pendant blank">
 							</div><!--end pendant-->
 						</div><!--end pendant-container-->
 						
@@ -103,10 +113,28 @@
 				<br><br>
 		</div><!-- end right side live preview-->
 
-	<?php if(isset($client_files_body)) echo $client_files_body; ?>
+		<!-- Primary navigation accessible to all -->
+	    <nav id='primary_nav'>
+			<ul>
+	        	<li id="navindex"><a href='/'>Home</a></li>
+	        	<li id="navproducts"><a href='/build-a-pendant/index.html'>Build a pendant</a></li>
+	        </ul>
+	    </nav><!-- end primary_nav-->
+	    
+	    <footer class='none'>
+			<p id='mySpan'>
+				Lucille Kenney, Dynamic Website Development with Susan Buck at Harvard Extension &copy;2013
+			</p>
+		</footer>
 
-	<script src="../build-a-pendant/js/build-a-pendant.js"></script>
+	</div><!--Wrapper div-->
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
+    <!-- Navigation highlight css 'iamhere' -->
+	<script type="text/javascript" src="../js/highlightnavigation.js"> </script>
 
+	<script src="js/build-a-pendant.js"></script>
 
+</body>
+</html>
