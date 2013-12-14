@@ -115,9 +115,9 @@
 <input type="hidden" name="add" value="1">
 <input type="hidden" name="cmd" value="_cart">
 <input type="hidden" name="business" value="lakenney@rcn.com">
-<input type="hidden" name="item_name" value="heart sm silver">
-<input type="hidden" name="item_number" value="1c1">
-<input type="hidden" name="amount" value="94.42">
+<input type="hidden" name="item_name" id="paypalShapeSizeMetal" value="circle md silver">
+<input type="hidden" name="item_number" value="pendant">
+<input type="hidden" name="amount" id="paypalPrice" value="94.39">
 <input type="hidden" name="shipping" value="0.00">
 <input type="hidden" name="no_shipping" value="2">
 <input type="hidden" name="currency_code" value="USD">
