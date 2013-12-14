@@ -46,7 +46,7 @@ $(document).ready(function() {
 		// Call to change character maximum when a new shape and/or size is clicked
 		changeMaxLength($('[name|=shapes]:checked').val(),$('[name|=size]:checked').val());
 
-		// Pass selected pendant to paypal form
+		// Pass selected pendant valyes to id on paypal form
 		$('#paypalShapeSizeMetal').val(shapes + '  ' + size + '  ' + metals);
 
 	 });
@@ -188,7 +188,7 @@ $(document).ready(function() {
 		// Print the cost of the pendant
 		$('#output').html(pendantCost);
 
-		// Pass selected pendant cost to paypal form
+		// Pass selected pendant cost value to id on paypal form
 		$('#paypalPrice').val(pendantCost);
 
 	}
@@ -394,7 +394,6 @@ $(document).ready(function() {
 	    $('#message-error').html('You have ' + how_many_left + ' characters left');
 
 		// Inject the message into the output div on the canvas
-		//console.log(value);
 		$('#message-output').html(value);	
 	};
 

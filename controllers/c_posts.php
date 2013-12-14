@@ -120,7 +120,7 @@ class posts_controller extends base_controller {
 
         // JavaScript files
             $client_files_body = Array(
-                    '/js/posts_control_panel.js'
+                '/js/posts_control_panel.js'
             );            
 
             $this->template->client_files_body = Utils::load_client_files($client_files_body);

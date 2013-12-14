@@ -68,7 +68,4 @@
 	<?php endforeach; ?>
 	<div class='clearfix'> </div>
 </div><!--end talkers_container-->
-<!-- 
-	delete links that shows up on the user's posts
- 	take them to a single post view with the option to confirm delete a single post
- -->
+

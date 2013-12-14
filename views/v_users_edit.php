@@ -3,7 +3,7 @@
 -->
     <h2>You can edit your profile here if you like. </h2>
              
-        <form method='POST' action='/users/p_edit'>
+        <form method='POST' action='/users/p_edit' id='validateEdits'>
 
             First Name<br>
             <!--<input type='text' name='first_name' value='<?php if(isset($_POST['first_name'])) echo $_POST['first_name']?>'>-->
@@ -16,7 +16,7 @@
             	<br><br>
     
             Email<br>
-                <input type='text' name='email' value='<?=$user->email?>'>    
+                <input type='text' name='email' id='email' value='<?=$user->email?>' class="required email">    
             	<br><br>
     
             <?php if(isset($error)): ?>
@@ -32,8 +32,9 @@
                 <input type='password' name='password'>    
             	<br><br>
             
-                Do you have a website you'd like to share? Please include http(s):// with your website name.<br>
-                <input type='text' name='website' value='<?php if(isset($_POST['website'])) echo $_POST['website']?>'>
+            Do you have a website you'd like to share? Please include http(s):// with your website name.<br>
+                <!--<input type='text' name='website' value='<?php if(isset($_POST['website'])) echo $_POST['website']?>'>-->
+                <input type='text' name='website' id='url' value='<?=$user->website?>' class='url'>    
             	<br><br>
 
             <input type='submit' value='Edit Profile'>

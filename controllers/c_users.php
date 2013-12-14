@@ -8,8 +8,7 @@ class users_controller extends base_controller {
 
     public function index() {
     
-        
-    echo "This is the index page";
+    #echo "This is the index page";
     
     }
 
@@ -25,7 +24,7 @@ class users_controller extends base_controller {
         $this->template->body_id 			= 'signup';
 
         # Render template
-            echo $this->template;
+        echo $this->template;
             
     }
     
@@ -137,7 +136,7 @@ class users_controller extends base_controller {
     }
     
 	/*-------------------------------------------------------------------------------------------------
-	EDIT
+	EDIT profile
 	-------------------------------------------------------------------------------------------------*/
 
     public function edit() {
@@ -164,7 +163,7 @@ class users_controller extends base_controller {
     }
 
     /*-------------------------------------------------------------------------------------------------
-    EDIT process
+    EDIT profile process
     -------------------------------------------------------------------------------------------------*/
         public function p_edit() {
     

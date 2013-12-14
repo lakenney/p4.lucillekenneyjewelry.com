@@ -13,7 +13,7 @@
 				</li>
     		</ul>
     		
-    		<!-- If there exists a connection with this user, show a unfollow link -->
+    		<!-- If there exists a connection with this user, show an unfollow link -->
     		<? if(isset($connections[$user['user_id']])): ?>
         		<a href='/posts/unfollow/<?=$user['user_id']?>' class='buttonLink'>
         			Unfollow

@@ -1,15 +1,15 @@
-<form method='POST' action='/users/p_signup' id="contactform">
+<form method='POST' action='/users/p_signup' id="validateSignup">
 
     First Name<br>
-    <input type='text' id='first_name' name='first_name' value='<?php if(isset($_POST['first_name'])) echo $_POST['first_name']?>' class="required" >
+    <input type='text' name='first_name' id='first_name' value='<?php if(isset($_POST['first_name'])) echo $_POST['first_name']?>' class="required" >
     <br><br>
     
     Last Name<br>
-	<input type='text' id='last_name' name='last_name' value='<?php if(isset($_POST['last_name'])) echo $_POST['last_name']?>' class="required" >
+	<input type='text'  name='last_name' value='<?php if(isset($_POST['last_name'])) echo $_POST['last_name']?>' class="required" >
     <br><br>
     
     Email<br>
-    <input type='text' id="email" name='email' class="required email" >
+    <input type='text' name='email' class="required email" >
     <br><br>
     
     <?php if($unique == false): ?>
@@ -21,16 +21,16 @@
     <?php endif; ?>
 
     Password<br>
-    <input type='password' name='password' id='password' class="required">
+    <input type='password' name='password' class="required">
     <br><br>
-
-    <?php if(isset($error)): ?>
+    <!-- Removed to use validateMe js -->
+    <!--<?php if(isset($error)): ?>
         <div class='error'>
             Please fill in all fields!.
         </div>
         <br>
         
-    <?php endif; ?>
+    <?php endif; ?>-->
     
     <input type='submit' value='Sign up'>
 
