@@ -10,9 +10,9 @@
 
     <br>-->
 	<!--css-->
-	<!--<link rel="stylesheet" href="/build-a-pendant/css/main.css" type="text/css">
+	<link rel="stylesheet" href="/build-a-pendant/css/main.css" type="text/css">
 	<link rel="stylesheet" href="/build-a-pendant/css/features.css" type="text/css">
-	<link rel="stylesheet" href='/build-a-pendant/css/responsive.css'>-->
+	<link rel="stylesheet" href='/build-a-pendant/css/responsive.css'>
 	
 <!--<body id='pendants'>-->
 
@@ -100,6 +100,32 @@
 				<!-- Buttons -->
 				<input type='button' id='refresh-btn' value='Start over'>
 				<input type='button' id='print-btn' value='Print'>
+				<input type='button' id='buy' value='Buy'>
+
+<!-- Paypal purchase -->
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="business" value="lakenney@rcn.com">
+<input type="image" src="http://virtualwindowshopping.com/images/navViewCart.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+<input type="hidden" name="display" value="1">
+</form>
+
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="image" src="http://virtualwindowshopping.com/images/buyNowbutton.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+<input type="hidden" name="add" value="1">
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="business" value="lakenney@rcn.com">
+<input type="hidden" name="item_name" value="heart sm silver">
+<input type="hidden" name="item_number" value="1c1">
+<input type="hidden" name="amount" value="94.42">
+<input type="hidden" name="shipping" value="0.00">
+<input type="hidden" name="no_shipping" value="2">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="bn" value="PP-ShopCartBF">
+</form>
+<!-- end Paypal purchase -->
+
 				<br><br>
 		</div><!-- end right side live preview-->
 
