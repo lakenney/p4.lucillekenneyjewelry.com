@@ -14,6 +14,8 @@
 	<!--css-->
 	<!--<link rel="stylesheet" href="/css/master.css">-->
 	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet" href="/css/contactForm.css">
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <!-- Navigation highlight css 'iamhere' -->
@@ -96,6 +98,26 @@
 		<script type="text/javascript" src="/js/jquery.form.js"> </script>
 		<!--<script type="text/javascript" src="/js/posts_add.js"> </script>-->
 		<script type="text/javascript" src="/js/posts_control_panel.js"> </script>
+
+		<!-- Form validator-->
+		<script src="/js/form/jquery.validate.js"></script>
+	    <script src="/js/form/additional-methods.js"> </script>
+	    
+		<!-- Form validator-->
+	    <script>
+			$(document).ready(function () {
+			
+				$('#contactform').validate({ // initialize the plugin
+					rules: {
+						phone_number: {
+							required: true,
+							phoneUS: true
+						}
+					},
+				});
+			
+			});
+		</script>		
 
 </body>
 </html>

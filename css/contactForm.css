@@ -1,0 +1,61 @@
+/* Contact Form */
+
+#contact-wrapper {
+	width:320px;
+	border:1px solid #e2e2e2;
+/*	background:#f1f1f1;
+*/		background-color:#e8e8e8;
+	padding:20px;
+	
+/*	float:left;
+*/}
+#contact-wrapper div {
+/*	clear:both;
+*/	margin:1em 0;
+}
+#contact-wrapper label {
+	display:block;
+	float:none;
+	font-size:16px;
+/*	width:auto;
+*/	
+}
+#contact-wrapper .error {
+	color:#c8271b;
+}
+form#contactform input {
+	border-color:#B7B7B7 #E8E8E8 #E8E8E8 #B7B7B7;
+	border-style:solid;
+	border-width:1px;
+	padding:5px;
+	font-size:16px;
+	color:#333;
+	width:310px;
+}
+form#contactform textarea {
+/*	font-family:Arial, Tahoma, Helvetica, sans-serif;
+*/	font-family: 'PT Sans', sans-serif;
+	font-size:100%;
+	padding:0.6em 0.5em 0.7em;
+	border-color:#B7B7B7 #E8E8E8 #E8E8E8 #B7B7B7;
+	border-style:solid;
+	border-width:1px;
+	width:310px;
+	}
+	
+form#contactform input[type="email"]
+{
+    border:1px solid red;
+    text-decoration:none;
+    font-family:helvetica;
+    color:red;
+    background:url(../images/btn_hover.png) repeat-x;
+}
+.contact-info {
+	padding-left:5px;
+}
+
+.contact-info li {
+	display:block;
+	list-style:none;
+}

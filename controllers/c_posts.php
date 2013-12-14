@@ -190,6 +190,10 @@ class posts_controller extends base_controller {
         // Unix timestamp of when this post was created / modified
         $_POST['created']  = Time::now();
         $_POST['modified'] = Time::now();
+
+        # To protect against xss we remove HTMl special characters, strip tags and slashes
+        # $_POST["content"] = htmlspecialchars($_POST["content"], ENT_QUOTES, 'UTF-8');
+        # $_POST["content"] = strip_tags($_POST["content"]);
                 
         // Insert method already sanitized                 
         DB::instance(DB_NAME)->insert('posts',$_POST);

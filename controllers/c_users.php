@@ -16,7 +16,6 @@ class users_controller extends base_controller {
 	/*-------------------------------------------------------------------------------------------------
 	SIGNUP
 	-------------------------------------------------------------------------------------------------*/
-
     public function signup() {
     
         # Setup view
@@ -72,7 +71,10 @@ class users_controller extends base_controller {
 		}
     
     }
-    
+
+    /*-------------------------------------------------------------------------------------------------
+    Signup process
+    -------------------------------------------------------------------------------------------------*/    
     public function p_signup() {
 
         // Dump out the results of POST to see what the form submitted
@@ -146,6 +148,8 @@ class users_controller extends base_controller {
         	die('You must signup or log in before you can edit your profile. <a href="/">Home</a>');
     	}
         
+        #$this->user->user_id = DB::instance(DB_NAME)->sanitize($this->user->user_id);
+
         # Setup view
         $this->template->content = View::instance('v_users_edit');
         $this->template->content->error = Null;
@@ -158,8 +162,11 @@ class users_controller extends base_controller {
         
         // echo "This is the edit profile page";
     }
-    
-    public function p_edit() {
+
+    /*-------------------------------------------------------------------------------------------------
+    EDIT process
+    -------------------------------------------------------------------------------------------------*/
+        public function p_edit() {
     
 		if(!$_POST) {
 			Router::redirect('/users/edit');
