@@ -155,25 +155,24 @@ class posts_controller extends base_controller {
     }
 
     /*-------------------------------------------------------------------------------------------------
-    ADD pass add view to index view
+    ADD pass add view to index view Display a new post form
     -------------------------------------------------------------------------------------------------*/
     public function add() {
     
         // Setup view and passed to v_posts_index
-        // $this->template->content         = View::instance('v_posts_add');
+        //$this->template->content         = View::instance('v_posts_add');
 
         $client_files_body = Array(
-            '/js/jquery.form.js',
-            '/js/posts_add.js'
+            "/js/jquery.form.js",
+            "/js/posts_add.js"
         );            
 
-        $this->template->client_files_body = Utils::load_client_files($client_files_body);
+        $this->template->client_files_body = Utils::load_client_files($client_files_body); 
 
         // Another view
         #$this->template->content->moreContent = View::instance('v_posts_index'); 
 
         echo $this->template;
-    
     
     }
     
@@ -210,9 +209,8 @@ class posts_controller extends base_controller {
         // Render the view
         echo $view;
 
-        //echo "New post was added on ".Time::display(Time::now());        
-        // Where do I want to redirect them
-        //Router::redirect('/posts');
+        // echo "New post was added on ".Time::display(Time::now());        
+        // Router::redirect('/posts');
 
     }
     

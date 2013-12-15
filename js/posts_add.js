@@ -4,9 +4,10 @@ var options = {
     beforeSubmit: function() {
         $('#results').html("Adding...");
     },
+    // You post has been added
     success: function(response) {   
         $('#results').html(response);
     } 
 }; 
 
-$('form').ajaxForm(options);
+$('#add_posts_form').ajaxForm(options);
