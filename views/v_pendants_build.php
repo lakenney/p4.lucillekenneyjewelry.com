@@ -116,7 +116,7 @@
 <input type="hidden" name="cmd" value="_cart">
 <input type="hidden" name="business" value="lakenney@rcn.com">
 <input type="hidden" name="item_name" id="paypalShapeSizeMetal" value="circle md silver">
-<input type="hidden" name="item_number" value="pendant">
+<input type="hidden" name="item_number" id="paypalMessage" value="pendant">
 <input type="hidden" name="amount" id="paypalPrice" value="94.39">
 <input type="hidden" name="shipping" value="0.00">
 <input type="hidden" name="no_shipping" value="2">

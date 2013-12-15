@@ -13,10 +13,8 @@ class posts_controller extends base_controller {
     
     /*-------------------------------------------------------------------------------------------------
 	INDEX ... displays Add posts and Followed users on the index page.
-	-------------------------------------------------------------------------------------------------*/
-    
+	-------------------------------------------------------------------------------------------------*/  
     public function index() {
-    
 
     	// Set up 3 Views
     		
@@ -84,7 +82,7 @@ class posts_controller extends base_controller {
 		$this->template->content->usersView->users  = $users;
 		
 		
-		    	// Build the query to figure out what connections does this user already have? 
+		// Build the query to figure out what connections does this user already have? 
     	// I.e. who are they following
     	$q = "SELECT * 
         	FROM users_users
@@ -102,16 +100,14 @@ class posts_controller extends base_controller {
     	#$this->template->content->users       = $users;
     	$this->template->content->usersView->connections = $connections;
 
-
     	// Render the View
     	echo $this->template;
 	}
 	
 
     /*-------------------------------------------------------------------------------------------------
-    Control panel to display 3 form outputs
+    CONTROL PANEL to display 3 form outputs
     -------------------------------------------------------------------------------------------------*/
-
     public function control_panel() {
             
         // Setup view
@@ -131,9 +127,8 @@ class posts_controller extends base_controller {
 
 
     /*-------------------------------------------------------------------------------------------------
-    Process the form data
+    CONTROL PANEL process the form data
     -------------------------------------------------------------------------------------------------*/
-
     public function p_control_panel() {
 
         $data = Array();
@@ -261,7 +256,6 @@ class posts_controller extends base_controller {
     /*-------------------------------------------------------------------------------------------------
 	FOLLOW
 	-------------------------------------------------------------------------------------------------*/
-
 	public function follow($user_id_followed) {
 	
 		// How do I automatically follow myself?
@@ -287,7 +281,6 @@ class posts_controller extends base_controller {
     /*-------------------------------------------------------------------------------------------------
 	UNFOLLOW
 	-------------------------------------------------------------------------------------------------*/
-
 	public function unfollow($user_id_followed) {
 
     	// Delete this connection
@@ -302,7 +295,6 @@ class posts_controller extends base_controller {
 	/*-------------------------------------------------------------------------------------------------
 	DELETE views for delete post method
 	-------------------------------------------------------------------------------------------------*/
-
 	public function delete($post_id) {
 		
 		// setup view

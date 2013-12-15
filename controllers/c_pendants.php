@@ -95,4 +95,6 @@ class pendants_controller extends base_controller {
         //Router::redirect('/build');
 
     }
+
+
 } # end of the class

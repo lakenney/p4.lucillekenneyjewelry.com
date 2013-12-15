@@ -6,28 +6,16 @@ class users_controller extends base_controller {
         #echo "users_controller construct called<br><br>";
     } 
 
+    /*-------------------------------------------------------------------------------------------------
+    INDEX
+    -------------------------------------------------------------------------------------------------*/
+
     public function index() {
     
-    echo "This is the index page";
+    #echo "This is the index page";
     
     }
 
-	/*-------------------------------------------------------------------------------------------------
-	SIGNUP (old signup before error check for empty fields
-	-------------------------------------------------------------------------------------------------*/
-
-/**    public function signup() {
-    
-        # Setup view
-        $this->template->content = View::instance('v_users_signup');
-        $this->template->title   = "Sign Up";
-        $this->template->body_id = 'signup';
-
-        # Render template
-            echo $this->template;
-            
-    }*/
-    
 	/*-------------------------------------------------------------------------------------------------
 	Demonstrating an alternative way to handle signup errors.
 	In this method, we're submitting the signup form to itself.
@@ -114,7 +102,10 @@ class users_controller extends base_controller {
 		}
     
     }
-    
+
+    /*-------------------------------------------------------------------------------------------------
+    SIGNUP process
+    -------------------------------------------------------------------------------------------------*/
     public function p_signup() {
 
         // Dump out the results of POST to see what the form submitted
@@ -175,7 +166,6 @@ class users_controller extends base_controller {
 	/*-------------------------------------------------------------------------------------------------
 	LOGIN
 	-------------------------------------------------------------------------------------------------*/
-
     public function login($error = NULL) {
     	
     	/* Code for controller specific css and js place in _v 
@@ -212,7 +202,10 @@ class users_controller extends base_controller {
         #echo "This is the login page";
                 	
     }
-    
+
+    /*-------------------------------------------------------------------------------------------------
+    LOGIN process
+    -------------------------------------------------------------------------------------------------*/
     public function p_login() {
     
     	// Sanitize the user entered data to prevent any funny-business (re: SQL Injection Attacks)
@@ -267,7 +260,6 @@ class users_controller extends base_controller {
 	/*-------------------------------------------------------------------------------------------------
 	LOGOUT
 	-------------------------------------------------------------------------------------------------*/
-
     public function logout() {
     
         // Generate and save a new token for next login
@@ -297,8 +289,7 @@ class users_controller extends base_controller {
     
 	/*-------------------------------------------------------------------------------------------------
 	PROFILE
-	-------------------------------------------------------------------------------------------------*/
-    
+	-------------------------------------------------------------------------------------------------*/   
     public function profile($user_name = NULL) {
     
     	// Don't have to do this because it's already in the base_controller

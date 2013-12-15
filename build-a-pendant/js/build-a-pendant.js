@@ -394,7 +394,11 @@ $(document).ready(function() {
 	    $('#message-error').html('You have ' + how_many_left + ' characters left');
 
 		// Inject the message into the output div on the canvas
-		$('#message-output').html(value);	
+		$('#message-output').html(value);
+
+		// Pass the message to paypal form
+		$('#paypalMessage').val(message-output.toString());
+
 	};
 
 

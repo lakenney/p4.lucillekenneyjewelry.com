@@ -6,6 +6,9 @@ class contacts_controller extends base_controller {
         #echo "contacts_controller construct called<br><br>";
     } 
 
+    /*-------------------------------------------------------------------------------------------------
+    INDEX
+    -------------------------------------------------------------------------------------------------*/
     public function index() {
 
 		$this->template->content = View::instance('v_contacts_info');
@@ -17,6 +20,9 @@ class contacts_controller extends base_controller {
 		echo $this->template; 
     }
 
+    /*-------------------------------------------------------------------------------------------------
+    TEST contacts page
+    -------------------------------------------------------------------------------------------------*/
     public function test() {
             
         # Setup view

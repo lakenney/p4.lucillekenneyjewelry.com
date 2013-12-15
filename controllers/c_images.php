@@ -4,11 +4,14 @@ class images_controller extends base_controller {
     public function __construct() {
         parent::__construct();
         #echo "images_controller construct called<br><br>";
-    } 
+    }
 
+	/*-------------------------------------------------------------------------------------------------
+	LOGIN
+	-------------------------------------------------------------------------------------------------*/
     public function index() {
     
-    echo "This is the index page";
+    #echo "This is the index page";
     
     }
     
@@ -32,6 +35,9 @@ class images_controller extends base_controller {
 		on what the user is allowed to upload. 
 		*/
 
+	/*-------------------------------------------------------------------------------------------------
+	UPLOAD FILE
+	-------------------------------------------------------------------------------------------------*/
     public function upload_file1() {
     
         # Setup view
@@ -42,7 +48,9 @@ class images_controller extends base_controller {
         # Render template
         echo $this->template;
     }
-    
+	/*-------------------------------------------------------------------------------------------------
+	UPLOAD FILE process
+	-------------------------------------------------------------------------------------------------*/
     public function p_upload_file1() {
     
 		if ($_FILES["file"]["error"] > 0) {
@@ -59,7 +67,7 @@ class images_controller extends base_controller {
     }
     
     /*-------------------------------------------------------------------------------------------------
-	Upload Image create a temporary copy of the uploaded files in the PHP temp folder on the server
+	UPLOAD IMAGE create a temporary copy of the uploaded files in the PHP temp folder on the server
 	-------------------------------------------------------------------------------------------------*/
 	
 		/* 
@@ -78,7 +86,11 @@ class images_controller extends base_controller {
         # Render template
         echo $this->template;
     }
-    public function p_upload_image() {
+
+	/*-------------------------------------------------------------------------------------------------
+	UPLOAD IMAGE process
+	-------------------------------------------------------------------------------------------------*/
+      public function p_upload_image() {
     
 		$allowedExts = array("gif", "jpeg", "jpg", "png");
 		$temp = explode(".", $_FILES["file"]["name"]);

@@ -6,6 +6,9 @@ class users_controller extends base_controller {
         #echo "users_controller construct called<br><br>";
     } 
 
+    /*-------------------------------------------------------------------------------------------------
+    INDEX
+    -------------------------------------------------------------------------------------------------*/
     public function index() {
     
     #echo "This is the index page";
@@ -72,7 +75,7 @@ class users_controller extends base_controller {
     }
 
     /*-------------------------------------------------------------------------------------------------
-    Signup process
+    SIGNUP process
     -------------------------------------------------------------------------------------------------*/    
     public function p_signup() {
 
@@ -280,7 +283,10 @@ class users_controller extends base_controller {
         #echo "This is the login page";
                 	
     }
-    
+
+    /*-------------------------------------------------------------------------------------------------
+    LOGIN process
+    -------------------------------------------------------------------------------------------------*/
     public function p_login() {
     
     	// Sanitize the user entered data to prevent any funny-business (re: SQL Injection Attacks)

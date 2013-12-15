@@ -53,7 +53,7 @@ class practice_controller extends base_controller {
  		}
 		#var_dump($valid_fields);
 		#var_dump($_POST);
-/**		
+/*		
 			if(!(trim($_POST['password'])=="")) {
  				unset($_POST['password']);
 				}
