@@ -31,8 +31,8 @@ $('#refresh-button').click(function() {
 
             // Parse the JSON results into an array
             var data = $.parseJSON(response);
-            //var products = $.parseJSON(response);
-
+            //var data = $.parseJSON(response);
+            console.log(data);
 
             // Inject the data into the page
             $('#product_count').html(data['product_count']);

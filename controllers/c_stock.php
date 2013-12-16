@@ -9,7 +9,6 @@ class stock_controller extends base_controller {
     /*-------------------------------------------------------------------------------------------------
     Index
     -------------------------------------------------------------------------------------------------*/
- 
 	public function index() {
 		
 		#echo "stock_controller construct called<br><br>";
@@ -59,15 +58,15 @@ class stock_controller extends base_controller {
         $q = "SELECT created FROM posts ORDER BY created DESC LIMIT 1";
         $data['most_recent_post'] = Time::display(DB::instance(DB_NAME)->select_field($q));
 
-        // Build the query to get all the products
+        /*// Build the query to get all the products
         $q = "SELECT *
             FROM products";
 
         // Execute the query to get all the products. 
         // Store the result array in the variable $products
-        $data = DB::instance(DB_NAME)->select_rows($q);
+        $products = DB::instance(DB_NAME)->select_rows($q);
 
-        //print_r($products);
+        print_r($products);*/
 
         # Send back json results to the JS, formatted in json
         echo json_encode($data);
