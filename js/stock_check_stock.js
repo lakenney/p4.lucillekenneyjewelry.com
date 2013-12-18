@@ -22,23 +22,26 @@ $('#refresh-button').click(function() {
     $.ajax({
         type: 'POST',
         url: '/stock/p_check_stock',
-        success: function(response) { 
+        success: function(products) { 
 
             // For debugging purposes
-            // console.log(response);
+            //console.log(response);
 
             // Example response: {"post_count":"9","user_count":"13","most_recent_post":"May 23, 2012 1:14am"}
 
             // Parse the JSON results into an array
-            var data = $.parseJSON(response);
             //var data = $.parseJSON(response);
-            console.log(data);
+            var products = $.parseJSON(response);
+            console.log(products);
 
             // Inject the data into the page
-            $('#product_count').html(data['product_count']);
+            $('#product_name').html(products['product_name']);
+            $('stock').val(products[stock]);
+
+            /*$('#product_count').html(data['product_count']);
             $('#post_count').html(data['post_count']);
             $('#user_count').html(data['user_count']);
-            $('#most_recent_post').html(data['most_recent_post']);
+            $('#most_recent_post').html(data['most_recent_post']);*/
 
         },
     });

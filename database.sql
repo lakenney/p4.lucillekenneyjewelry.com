@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 14, 2013 at 09:32 PM
+-- Generation Time: Dec 18, 2013 at 04:06 PM
 -- Server version: 5.1.70-cll
 -- PHP Version: 5.3.17
 
@@ -205,7 +205,7 @@ INSERT INTO `users` (`user_id`, `created`, `modified`, `token`, `password`, `las
 (47, 1383591289, 1383591289, 'af757f8614791b9776cb04ff09c0b911ebd78b55', '89e2d4364804531249a9e8c7e116dc68101a1593', 0, '', 'Adam', 'Beerman', 'adamthebeerman@gmail.com', ''),
 (48, 1383596141, 1383596141, '73174558a07bd9345dd0a0b2c08006e9b501dee1', 'c81c8ecfc7b3581dbefa6539559a63e2dc332285', 0, '', 'Jewel', 'King', 'JewelKing@yahoo.com', ''),
 (49, 1383605209, 1383605209, '6c2c2c7f4876e15cf8c934b920455f944d75fa6a', 'e224780eb8af49731c33bb6e6c5f8fb093bae250', 0, '', 'Jackie', 'Wilson', 'jackie@jackie.com', ''),
-(50, 1383635415, 1383635415, 'b0c89a94d05835eb3ead4ef326267b0db005d81f', 'c81c8ecfc7b3581dbefa6539559a63e2dc332285', 0, '', 'test', 'test', 'test@gmail.com', ''),
+(50, 1383635415, 1383635415, 'b7b2effdb1f9082ce9a8b3a28d2999f3d0b96ae2', 'c81c8ecfc7b3581dbefa6539559a63e2dc332285', 0, '', 'test', 'test', 'test@gmail.com', ''),
 (51, 1383690094, 1383690094, 'e2a74dd2651772ea5a3ea47632b0a904bad5206a', '6e1160e86447c32bac3475fea0fe94450c6d579f', 0, '', 'CJ', 'Sheets', 'cesjr02@hotmail.com', ''),
 (52, 1383789318, 1383789639, 'df75a3db97249392088851a93aa3f2263d0eb710', 'ce48e9257e8708b2470d7643b436f3c55218c063', 0, '', 'Frank', 'Aveni', 'frank@email.org', ''),
 (53, 1383882673, 1383882673, '41019913781ac04de265e6ab82e7b3e7c1eeb6b2', '89ad7f222414923e1856d839f40496f8f4556459', 0, '', 'Debbie', 'Reches', 'debbie@debrex.biz', ''),

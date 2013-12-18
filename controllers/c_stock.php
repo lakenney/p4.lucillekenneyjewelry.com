@@ -40,7 +40,7 @@ class stock_controller extends base_controller {
     -------------------------------------------------------------------------------------------------*/
     public function p_check_stock() {
 
-        $data = Array();
+        /*$data = Array();
 
         # Find out how many products there are
         $q = "SELECT count(product_id) FROM products";
@@ -57,8 +57,8 @@ class stock_controller extends base_controller {
         # Find out when the last post was created
         $q = "SELECT created FROM posts ORDER BY created DESC LIMIT 1";
         $data['most_recent_post'] = Time::display(DB::instance(DB_NAME)->select_field($q));
-
-        /*// Build the query to get all the products
+        */
+        // Build the query to get all the products
         $q = "SELECT *
             FROM products";
 
@@ -66,10 +66,12 @@ class stock_controller extends base_controller {
         // Store the result array in the variable $products
         $products = DB::instance(DB_NAME)->select_rows($q);
 
-        print_r($products);*/
+        /*print  '<pre>';
+        print_r($products);
+        print '</pre>';*/
 
         # Send back json results to the JS, formatted in json
-        echo json_encode($data);
+        echo json_encode($products);
     }
 
 

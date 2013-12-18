@@ -100,7 +100,7 @@
 				<!-- Buttons -->
 				<input type='button' id='refresh-btn' value='Start over'>
 				<input type='button' id='print-btn' value='Print'>
-				<input type='button' id='buy' value='Buy'>
+				<!--<input type='button' id='buy' value='Buy'>-->
 
 <!-- Paypal purchase -->
 <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -116,7 +116,14 @@
 <input type="hidden" name="cmd" value="_cart">
 <input type="hidden" name="business" value="lakenney@rcn.com">
 <input type="hidden" name="item_name" id="paypalShapeSizeMetal" value="circle md silver">
-<input type="hidden" name="item_number" id="paypalMessage" value="pendant">
+
+
+
+<!--<input type="hidden" name="on0" id='paypalMessage' value="LUV">-->
+
+
+
+<input type="hidden" name="item_number" id="pendant" value="pendant">
 <input type="hidden" name="amount" id="paypalPrice" value="94.39">
 <input type="hidden" name="shipping" value="0.00">
 <input type="hidden" name="no_shipping" value="2">

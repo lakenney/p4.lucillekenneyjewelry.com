@@ -358,6 +358,7 @@ $(document).ready(function() {
 
 	        $('#message').attr("maxlength",maxMessageLength);
 	        $('#message-error').html("Max "+maxMessageLength.toString() +" characters");
+		
 
 	}
 
@@ -397,7 +398,8 @@ $(document).ready(function() {
 		$('#message-output').html(value);
 
 		// Pass the message to paypal form
-		$('#paypalMessage').val(message-output.toString());
+		//$('#paypalMessage').val(message-output.toString());
+		//$('#paypalMessage').val(message-output);
 
 	};
 
