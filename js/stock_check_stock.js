@@ -22,7 +22,7 @@ $('#refresh-button').click(function() {
     $.ajax({
         type: 'POST',
         url: '/stock/p_check_stock',
-        success: function(products) { 
+        success: function(response) { 
 
             // For debugging purposes
             //console.log(response);
@@ -32,13 +32,23 @@ $('#refresh-button').click(function() {
             // Parse the JSON results into an array
             //var data = $.parseJSON(response);
             var products = $.parseJSON(response);
-            console.log(products);
+            //console.log(products);
+
+            for (var key in products) {
+
+                console.log(products[key]['product_name'])
+                console.log(products[key]['shape'])
+                console.log(products[key]['size'])
+                console.log(products[key]['metal'])
+                console.log(products[key]['stock'])
+                console.log(products[key]['price'])
+
+            }
 
             // Inject the data into the page
-            $('#product_name').html(products['product_name']);
-            $('stock').val(products[stock]);
+            //$('#product_name').html(products['product_name']);
 
-            /*$('#product_count').html(data['product_count']);
+           /* $('#product_count').html(data['product_count']);
             $('#post_count').html(data['post_count']);
             $('#user_count').html(data['user_count']);
             $('#most_recent_post').html(data['most_recent_post']);*/

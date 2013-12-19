@@ -66,6 +66,8 @@ class stock_controller extends base_controller {
         // Store the result array in the variable $products
         $products = DB::instance(DB_NAME)->select_rows($q);
 
+        //$this->template->content->products = $products;
+
         /*print  '<pre>';
         print_r($products);
         print '</pre>';*/

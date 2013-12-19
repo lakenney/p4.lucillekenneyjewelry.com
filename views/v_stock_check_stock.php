@@ -11,5 +11,8 @@ Most recent post: <div id='most_recent_post'></div><br> -->
 
 <?php echo $products->product_name; ?>
 
+<?php echo $products[key]['product_name']; ?>
+
+<div id='products'></div>
 
 <button id='refresh-button'>Refresh</button>
