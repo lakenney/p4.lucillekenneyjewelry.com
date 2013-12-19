@@ -117,11 +117,7 @@
 <input type="hidden" name="business" value="lakenney@rcn.com">
 <input type="hidden" name="item_name" id="paypalShapeSizeMetal" value="circle md silver">
 
-
-
 <!--<input type="hidden" name="on0" id='paypalMessage' value="LUV">-->
-
-
 
 <input type="hidden" name="item_number" id="pendant" value="pendant">
 <input type="hidden" name="amount" id="paypalPrice" value="94.39">

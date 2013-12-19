@@ -661,5 +661,25 @@ footer {
 		color: #fff;
 		background: #999999;
 	}
+
+	.product-header h3{
+		float:left;
+		max-width: 190px;
+		padding-right: 20px;
+
+	}
+
+	.product {
+		float:left;
+		width: 100px;
+		padding-right: 20px;
+		border-style: 1px;
+		border-color: #000;
+
+	}
+
+	#products-wrapper #products ul {
+
+	}
 	
 }
