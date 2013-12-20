@@ -45,12 +45,11 @@ Most recent post: <div id='most_recent_post'></div><br> -->
 
 <!--<div id='products'></div>-->
 	</div><!--end product-content-->
-	
+
 	<!-- to clear the floats -->
 	<div class="clear-fix"></div>
 
 </div><!--end product content wrapper-->
-
 
 
 

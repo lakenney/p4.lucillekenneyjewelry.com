@@ -76,6 +76,62 @@ class stock_controller extends base_controller {
         echo json_encode($products);
     }
 
+   /*-------------------------------------------------------------------------------------------------
+    Stock Status
+    -------------------------------------------------------------------------------------------------*/
 
+    public function check_status() {
+
+        // Setup view
+            $this->template->content = View::instance('v_stock_check_status');
+            // $this->template->title    = "Check Status";
+
+        // JavaScript files
+            $client_files_body = Array(
+                '/js/stock_check_status.js'
+            );            
+
+            $this->template->client_files_body = Utils::load_client_files($client_files_body);
+
+        // Render template
+             echo $this->template;
+
+    //echo strrev($_POST['name']);
+
+    // Pass data results 
+    // Error codes
+    // If response = zero (false) display on back order
+
+    }
+    /*-------------------------------------------------------------------------------------------------
+    Process Check Status
+    -------------------------------------------------------------------------------------------------*/
+
+    public function p_check_status() {
+
+            // Build the query to get all the products
+        $q = "SELECT *
+            FROM products";
+
+        // Execute the query to get all the products. 
+        // Store the result array in the variable $products
+        $products = DB::instance(DB_NAME)->select_rows($q);
+
+        //$this->template->content->products = $products;
+
+        /*print  '<pre>';
+        print_r($products);
+        print '</pre>';*/
+
+        # Send back json results to the JS, formatted in json
+        echo json_encode($products);
+
+    //echo strrev($_POST['name']);
+
+    // Pass data results 
+    // Error codes
+    // If response = zero (false) display on back order
+
+    }
 
 } # end of the class

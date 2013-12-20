@@ -102,34 +102,34 @@
 				<input type='button' id='print-btn' value='Print'>
 				<!--<input type='button' id='buy' value='Buy'>-->
 
-<!-- Paypal purchase -->
-<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_cart">
-<input type="hidden" name="business" value="lakenney@rcn.com">
-<input type="image" src="http://virtualwindowshopping.com/images/navViewCart.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
-<input type="hidden" name="display" value="1">
-</form>
+		<!-- Paypal purchase -->
+		<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+		<input type="hidden" name="cmd" value="_cart">
+		<input type="hidden" name="business" value="lakenney@rcn.com">
+		<input type="image" src="http://virtualwindowshopping.com/images/navViewCart.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+		<input type="hidden" name="display" value="1">
+		</form>
 
-<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="image" src="http://virtualwindowshopping.com/images/buyNowbutton.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
-<input type="hidden" name="add" value="1">
-<input type="hidden" name="cmd" value="_cart">
-<input type="hidden" name="business" value="lakenney@rcn.com">
-<input type="hidden" name="item_name" id="paypalShapeSizeMetal" value="circle md silver">
+		<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+		<input type="image" id='buyNow' src="http://virtualwindowshopping.com/images/buyNowbutton.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+		<input type="hidden" name="add" value="1">
+		<input type="hidden" name="cmd" value="_cart">
+		<input type="hidden" name="business" value="lakenney@rcn.com">
+		<input type="hidden" name="item_name" id="paypalShapeSizeMetal" value="circle md silver">
 
-<!--<input type="hidden" name="on0" id='paypalMessage' value="LUV">-->
+		<!--<input type="hidden" name="on0" id='paypalMessage' value="LUV">-->
 
-<input type="hidden" name="item_number" id="pendant" value="pendant">
-<input type="hidden" name="amount" id="paypalPrice" value="94.39">
-<input type="hidden" name="shipping" value="0.00">
-<input type="hidden" name="no_shipping" value="2">
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="lc" value="US">
-<input type="hidden" name="bn" value="PP-ShopCartBF">
-</form>
-<!-- end Paypal purchase -->
+		<input type="hidden" name="item_number" id="pendant" value="pendant">
+		<input type="hidden" name="amount" id="paypalPrice" value="94.39">
+		<input type="hidden" name="shipping" value="0.00">
+		<input type="hidden" name="no_shipping" value="2">
+		<input type="hidden" name="currency_code" value="USD">
+		<input type="hidden" name="lc" value="US">
+		<input type="hidden" name="bn" value="PP-ShopCartBF">
+		</form>
+		<!-- end Paypal purchase -->	
+<br><br>
 
-				<br><br>
 		</div><!-- end right side live preview-->
 
 	<?php if(isset($client_files_body)) echo $client_files_body; ?>

@@ -69,14 +69,7 @@ $('#refresh-button').click(function() {
                 $("<p>" + products[key]['price'] + "</p>").appendTo($("#product_price"));
                 //console.log.(product_name);
 
-                
-                /*product_title.appendTo($("#product_name"));
-                product_shape.appendTo($("#shape"));
-                product_size.appendTo($('#size'));
-                product_metal.appendTo($('#metal'));
-                product_stock.appendTo($('#stock'));
-                product_price.appendTo($('#price'));*/
-
+                /* This also works */
                 /*product_list = $('<ul>');
                 $('<li>',{class:'pendant'}).text(products[key]['product_name']).appendTo(product_list);
 
@@ -104,4 +97,9 @@ $('#refresh-button').click(function() {
 
         }
     });
+
+
+
+
+
 });
