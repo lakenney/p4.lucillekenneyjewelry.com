@@ -110,8 +110,8 @@
 		<input type="hidden" name="display" value="1">
 		</form>
 
-		<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-		<input type="image" id='buyNow' src="http://virtualwindowshopping.com/images/buyNowbutton.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+		<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" onsubmit="return false" method="post">
+		<input type="image" id='buy-now' src="http://virtualwindowshopping.com/images/buyNowbutton.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
 		<input type="hidden" name="add" value="1">
 		<input type="hidden" name="cmd" value="_cart">
 		<input type="hidden" name="business" value="lakenney@rcn.com">
@@ -136,6 +136,7 @@
 
 	<script src="../build-a-pendant/js/build-a-pendant.js"></script>
 
+	<script src="/js/stock_order.js"></script>
 
 
 

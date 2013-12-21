@@ -4,22 +4,28 @@
     via PHP's json_encode() method
 -------------------------------------------------------------------------------------------------*/
 
-    $('buyNow').click(function() {
+    $('#buy-now').click(function() {
+
 
 		$.ajax({
 			type:'POST',
-			url: 'https://www.paypal.com/cgi-bin/webscr',
+			url: '/stock/p_order',
+			data: {
+				// send data using json format
+				product:"5",quantity:"2"
+
+			},
+			//url: 'https://www.paypal.com/cgi-bin/webscr',
 			// success option will automatically feed to the function attached to success what the results are.
 			// Get selected item from paypal form
-			success: function(product) { // p_check_status will come back in the response variable
-				//console.log(results);
+			success: function(response) { // p_check_status will come back in the response variable
+				console.log(response);
 				// Get results and check it against database
-                $(response).html(product); //output to console, i'll want database or something
-            },
-            data: {
+                //$(response).html(data); //output to console, i'll want database or something
+            }
+            /*data: {
                 item_name: $('#paypalShapeSizeMetal').val(), // grab this name value pair from the form
-            }    		
-        });
-
+            }  */  		
+        }); 
 	});
 
