@@ -128,7 +128,7 @@
 		<input type="hidden" name="bn" value="PP-ShopCartBF">
 		</form>
 		<!-- end Paypal purchase -->	
-<br><br>
+		<br><br>
 
 		</div><!-- end right side live preview-->
 

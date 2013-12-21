@@ -5,21 +5,28 @@
 -------------------------------------------------------------------------------------------------*/
 
     $('#buy-now').click(function() {
+		event.preventDefault();
 
-
+    	//var $form          = $(this),
 		$.ajax({
 			type:'POST',
 			url: '/stock/p_order',
-			data: {
-				// send data using json format
-				product:"5",quantity:"2"
-
+			data: products:5,quantity:"2"
+			{
+				// send data to php using json format
+				paypalPrice: $('#paypalPrice').val(),
+				paypalShapeSizeMetal: $('#paypalShapeSizeMetal').val(),
 			},
-			//url: 'https://www.paypal.com/cgi-bin/webscr',
+
+
+			//$form.serialize(),
+			//console.log( $( this ).serialize() );
+
+
 			// success option will automatically feed to the function attached to success what the results are.
 			// Get selected item from paypal form
-			success: function(response) { // p_check_status will come back in the response variable
-				console.log(response);
+			//success: function(response) { // p_check_status will come back in the response variable
+				//console.log(response);
 				// Get results and check it against database
                 //$(response).html(data); //output to console, i'll want database or something
             }

@@ -101,9 +101,11 @@ class stock_controller extends base_controller {
     -------------------------------------------------------------------------------------------------*/
     public function p_order() {
 
-        echo $_POST["product"];
+        echo $_POST["products"];
 
         // get post parameters from stock_check_status.js
+
+
         // retrieve items' ids from the post parameters
         // update values for these ids by retrieving the values found in the post
         // parameters
