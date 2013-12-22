@@ -1,38 +1,105 @@
 /*-------------------------------------------------------------------------------------------------
     When the Buy Now button is clicked, JavaScript makes a call to p_check_status() which 
     gathers the latest details we want into an array. That array is converted into JSON 
-    via PHP's json_encode() method
+    via PHP's json_encode() method ... 
+    see: http://stackoverflow.com/questions/5004233/jquery-ajax-post-example-with-php
 -------------------------------------------------------------------------------------------------*/
+// variable to hold request
+var request;
+// bind to the submit event of our form
+$('#buy-now').click(function(event){
+    // abort any pending request
+    if (request) {
+        request.abort();
+    }
+    // setup some local variables
+    var $form = $(this);
+    // let's select and cache all the fields
+    var $inputs = $form.find("input, select, button, textarea");
+    // serialize the data in the form
+    var serializedData = $form.serialize();
 
-    $('#buy-now').click(function() {
-		event.preventDefault();
+    // let's disable the inputs for the duration of the ajax request
+    $inputs.prop("disabled", true);
 
-    	//var $form          = $(this),
+    // fire off the request to /form.php
+    request = $.ajax({
+		url: '/stock/p_order',
+        type: "post",
+        data: serializedData
+    });
+
+    console.log(request);
+    // callback handler that will be called on success
+    request.done(function (response, textStatus, jqXHR){
+        // log a message to the console
+        console.log("Hooray, it worked!");
+    });
+
+    // callback handler that will be called on failure
+    request.fail(function (jqXHR, textStatus, errorThrown){
+        // log the error to the console
+        console.error(
+            "The following error occured: "+
+            textStatus, errorThrown
+        );
+    });
+
+    // callback handler that will be called regardless
+    // if the request failed or succeeded
+    request.always(function () {
+        // reenable the inputs
+        $inputs.prop("disabled", false);
+    });
+
+    // prevent default posting of form
+    event.preventDefault();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* $('#buy-now').click(function() {
+
+    	//var $form          = $(this);
 		$.ajax({
 			type:'POST',
 			url: '/stock/p_order',
-			data: products:5,quantity:"2"
-			{
+			data: {
+				// send data using json format
+				product:$('#paypalPrice').val(),quantity:"2"
+			},*/
+
+			/*{
 				// send data to php using json format
+				product
+				:"5",quantity:"2"
 				paypalPrice: $('#paypalPrice').val(),
 				paypalShapeSizeMetal: $('#paypalShapeSizeMetal').val(),
-			},
-
+			},*/
 
 			//$form.serialize(),
-			//console.log( $( this ).serialize() );
-
 
 			// success option will automatically feed to the function attached to success what the results are.
 			// Get selected item from paypal form
-			//success: function(response) { // p_check_status will come back in the response variable
-				//console.log(response);
+			/*success: function(response) { // p_check_status will come back in the response variable
+				console.log(response);
 				// Get results and check it against database
                 //$(response).html(data); //output to console, i'll want database or something
-            }
+            }*/
             /*data: {
                 item_name: $('#paypalShapeSizeMetal').val(), // grab this name value pair from the form
             }  */  		
-        }); 
-	});
+        /*}); 
+	});*/
 

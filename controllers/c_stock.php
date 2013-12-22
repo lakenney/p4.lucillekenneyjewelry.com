@@ -101,7 +101,10 @@ class stock_controller extends base_controller {
     -------------------------------------------------------------------------------------------------*/
     public function p_order() {
 
-        echo $_POST["products"];
+        // !!!sanitize posted data, to prevent injections and other malicious code.
+        echo $_POST["product"];
+        //$product = $_POST['product'];
+        //echo $_POST["quantity"];
 
         // get post parameters from stock_check_status.js
 

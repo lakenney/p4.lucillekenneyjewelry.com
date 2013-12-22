@@ -28,10 +28,10 @@
 				<hr>
 					<h2>Pick a shape</h2>
 						<div class="radioLeft">
-							<label><input type="radio" name="shapes" value="circle" checked>
-							circle</label>
+							<label>
+								<input type="radio" name="shapes" value="circle" checked>circle
+							</label>
 							<input type="radio" name="shapes" value="square">
-							
 							<label>square</label>
 							<input type="radio" name="shapes" value="heart">
 							<label>heart</label>
