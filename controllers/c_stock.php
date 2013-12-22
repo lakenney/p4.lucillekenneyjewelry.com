@@ -80,7 +80,7 @@ class stock_controller extends base_controller {
    /*-------------------------------------------------------------------------------------------------
     ORDER
     -------------------------------------------------------------------------------------------------*/
-    public function order() {
+    /*public function order() {
 
         // Setup view
            // $this->template->content = View::instance('v_pendants_build');
@@ -95,7 +95,7 @@ class stock_controller extends base_controller {
         // Render template
              //echo $this->template;
 
-    }
+    }*/
 
     /*-------------------------------------------------------------------------------------------------
     Process ORDER
@@ -107,17 +107,55 @@ class stock_controller extends base_controller {
 
         // This data came from paypal form as post parameters from stock_check_status.js
         $product = $_POST["product"];
-        $quantity = $_POST["quantity"];
+        //$quantity = $_POST["quantity"];
         //echo $(product);
 
+        // Comes back as 'product    circle md silver'
+        // Split product string
 
 
-        // Find match for $product in the database
+        //$pieces = explode(' ', $product);
+        //echo $pieces[0];
+        //echo $pieces[1];
+        //echo $pieces[2];
 
-        // subtract 1 from the value in stock 
+        list($shape, $size, $metal) = explode( ' ', $product);
+            //print $shape. ',' . $size . ',' . $metal;
+            // This returns 
+            // WHERE shape = 'circle' and size = 'md' and metal = 'silver' stock = ''
+            // var_dump This is the result of the dump
+            /*array(3) {
+              [0]=>
+              string(6) "circle"
+              [1]=>
+              string(2) "md"
+              [2]=>
+              string(6) "silver"
+            }*/
 
         // Build the query to get all the products
-        //$q = 'SELECT stock
+        // Find match for $product in the database
+        $q = "SELECT *
+            FROM products
+            WHERE shape = '$shape' and size = '$size' and metal = '$metal' stock = '$stock'";
+
+        $order = DB::instance(DB_NAME)->select_row($q);
+
+
+
+        /*print  '<pre>';
+        print_r($products);
+        print '</pre>';
+        */
+
+        // check how many are in stock
+        // if stock is zero ... say on back order 
+        // if stock is greater than zero subtract 1
+        // so then I do some calculation on the stock field to subtract one the update that field
+
+        // How? When I start the sql query, it breaks this page http://localhost:8888/stock/check_stock
+        // Build the query to get all the products
+        //$q = 'SELECT *
          //  FROM products
 
 
@@ -133,6 +171,9 @@ class stock_controller extends base_controller {
         //$data = DB::instance(DB_NAME)->select_rows($q);
 
         //$this->template->content = $data;
+
+
+        // subtract 1 from the value in stock 
 
         # Send back json results to the JS, formatted in json
         //echo json_encode($data);
