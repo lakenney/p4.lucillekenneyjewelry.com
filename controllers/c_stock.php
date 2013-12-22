@@ -83,78 +83,69 @@ class stock_controller extends base_controller {
     public function order() {
 
         // Setup view
-            $this->template->content = View::instance('v_pendants_build');
+           // $this->template->content = View::instance('v_pendants_build');
 
         // JavaScript files
-            $client_files_body = Array(
-                '/js/stock_order.js'
-            );            
+           // $client_files_body = Array(
+           //     '/js/stock_order.js'
+           // );            
 
-            $this->template->client_files_body = Utils::load_client_files($client_files_body);
+            //$this->template->client_files_body = Utils::load_client_files($client_files_body);
 
         // Render template
-             echo $this->template;
+             //echo $this->template;
 
     }
+
     /*-------------------------------------------------------------------------------------------------
     Process ORDER
     -------------------------------------------------------------------------------------------------*/
     public function p_order() {
 
-        // !!!sanitize posted data, to prevent injections and other malicious code.
-        echo $_POST["product"];
-        //$product = $_POST['product'];
-        //echo $_POST["quantity"];
+        // Sanitize posted data, to prevent injections and other malicious code.
+        $_POST = DB::instance(DB_NAME)->sanitize($_POST); 
 
-        // get post parameters from stock_check_status.js
+        // This data came from paypal form as post parameters from stock_check_status.js
+        $product = $_POST["product"];
+        $quantity = $_POST["quantity"];
+        //echo $(product);
 
 
-        // retrieve items' ids from the post parameters
-        // update values for these ids by retrieving the values found in the post
-        // parameters
 
-        /*// Build the query to get all the products
-        $q = 'SELECT stock
-            FROM products
-            WHERE stock = "'.$_POST['paypalShapeSizeMetal'].'"';
+        // Find match for $product in the database
+
+        // subtract 1 from the value in stock 
+
+        // Build the query to get all the products
+        //$q = 'SELECT stock
+         //  FROM products
+
+
+           // WHERE stock = "'.$stock.'"';
+
+        // echo a query is a useful debugging technique
+        //echo $q;
 
         // Execute the query to get stock count. 
         // Store the result array in the variable $data
-        $data = DB::instance(DB_NAME)->select_rows($q);
+        // Run the query, echo what it returns  
+        // echo DB::instance(DB_NAME)->select_field($q);
+        //$data = DB::instance(DB_NAME)->select_rows($q);
 
-        $this->template->content = $data;
-
-        print  '<pre>';
-        print_r($products);
-        print '</pre>';
+        //$this->template->content = $data;
 
         # Send back json results to the JS, formatted in json
-        echo json_encode($data);
-
-
-    // This is data we got from the paypal form         
-    // <input type="hidden" name="item_name" id="paypalShapeSizeMetal" value="circle md silver">
-
-    $_POST['paypalShapeSizeMetal'] = 'hello paypal post';*/
-    
-    //Make sure it's sanitized first
-    //$_POST = DB::instance(DB_NAME)->sanitize($_POST);
-    
-    //$q = 'SELECT stock
-            //FROM products
-            //WHERE stock = "'.$_POST['paypalShapeSizeMetal'].'"';
-    // echo a query is a useful debugging technique
-    //echo $q;
-        
-    // Run the query, echo what it returns  
-    //echo DB::instance(DB_NAME)->select_field($q);
-
-    //echo strrev($_POST['name']);
-
-    // Pass data results 
-    // Error codes
-    // If response = zero (false) display on back order
+        //echo json_encode($data);
 
     }
+
+        /*print  '<pre>';
+        print_r($products);
+        print '</pre>';
+        */
+                
+        // Pass data results 
+        // Error codes
+        // If response = zero (false) display on back order
 
 } # end of the class
