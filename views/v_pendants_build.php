@@ -110,7 +110,7 @@
 		<input type="hidden" name="display" value="1">
 		</form>
 
-		<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" onsubmit="return false" method="post">
+		<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
 		<input type="image" id='buy-now' src="http://virtualwindowshopping.com/images/buyNowbutton.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
 		<input type="hidden" name="add" value="1">
 		<input type="hidden" name="cmd" value="_cart">

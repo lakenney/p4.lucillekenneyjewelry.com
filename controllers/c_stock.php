@@ -107,84 +107,56 @@ class stock_controller extends base_controller {
 
         // This data came from paypal form as post parameters from stock_check_status.js
         $product = $_POST["product"];
-        //$quantity = $_POST["quantity"];
         //echo $(product);
 
         // Comes back as 'product    circle md silver'
-        // Split product string
-
-
-        //$pieces = explode(' ', $product);
-        //echo $pieces[0];
-        //echo $pieces[1];
-        //echo $pieces[2];
 
         list($shape, $size, $metal) = explode( ' ', $product);
-            //print $shape. ',' . $size . ',' . $metal;
-            // This returns 
-            // WHERE shape = 'circle' and size = 'md' and metal = 'silver' stock = ''
-            // var_dump This is the result of the dump
-            /*array(3) {
-              [0]=>
-              string(6) "circle"
-              [1]=>
-              string(2) "md"
-              [2]=>
-              string(6) "silver"
-            }*/
+        //print $shape. ',' . $size . ',' . $metal;
 
         // Build the query to get all the products
         // Find match for $product in the database
         $q = "SELECT *
             FROM products
-            WHERE shape = '$shape' and size = '$size' and metal = '$metal' stock = '$stock'";
+            WHERE shape = '$shape' and size = '$size' and metal = '$metal'";
 
         $order = DB::instance(DB_NAME)->select_row($q);
 
+        // "get the value from it's stock field" 
+        // the current stock total for the item 
+        $q = "SELECT stock FROM products 
+            WHERE shape = '".$shape."' 
+            AND size = '".$size."' 
+            AND metal ='".$metal."'"; 
+         
+        $current_stock = DB::instance(DB_NAME)->select_field($q); 
 
+        //"if it's zero, make a note to admin to back order, 
+        if($current_stock < 1) {
+            //note to admin back order
+            echo 'back order';
+        }
+        else {
+            //subtract one from $current_stock
+            $current_stock = current_stock - 1;
+        }
+        
+        $new_tally = Array (
+            'stock' => '$current_stock',
+        );
+
+        //and use the DB update method to update the stock for the item. 
+        DB::instance(DB_NAME)->update("products",$new_tally); 
+   }
 
         /*print  '<pre>';
         print_r($products);
         print '</pre>';
         */
-
-        // check how many are in stock
-        // if stock is zero ... say on back order 
-        // if stock is greater than zero subtract 1
-        // so then I do some calculation on the stock field to subtract one the update that field
-
-        // How? When I start the sql query, it breaks this page http://localhost:8888/stock/check_stock
-        // Build the query to get all the products
-        //$q = 'SELECT *
-         //  FROM products
-
-
-           // WHERE stock = "'.$stock.'"';
-
-        // echo a query is a useful debugging technique
-        //echo $q;
-
-        // Execute the query to get stock count. 
-        // Store the result array in the variable $data
-        // Run the query, echo what it returns  
-        // echo DB::instance(DB_NAME)->select_field($q);
-        //$data = DB::instance(DB_NAME)->select_rows($q);
-
-        //$this->template->content = $data;
-
-
-        // subtract 1 from the value in stock 
 
         # Send back json results to the JS, formatted in json
         //echo json_encode($data);
-
-    }
-
-        /*print  '<pre>';
-        print_r($products);
-        print '</pre>';
-        */
-                
+              
         // Pass data results 
         // Error codes
         // If response = zero (false) display on back order

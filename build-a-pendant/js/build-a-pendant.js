@@ -47,7 +47,7 @@ $(document).ready(function() {
 		changeMaxLength($('[name|=shapes]:checked').val(),$('[name|=size]:checked').val());
 
 		// Pass selected pendant valyes to id on paypal form
-		$('#paypalShapeSizeMetal').val(shapes + '  ' + size + '  ' + metals);
+		$('#paypalShapeSizeMetal').val(shapes + ' ' + size + ' ' + metals);
 
 	 });
 
