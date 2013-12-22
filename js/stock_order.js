@@ -4,7 +4,26 @@
     via PHP's json_encode() method ... 
     see: http://stackoverflow.com/questions/5004233/jquery-ajax-post-example-with-php
 -------------------------------------------------------------------------------------------------*/
-// variable to hold request
+//JSON Array. You can create this array any way you like. Perhaps by grabbing the user's choice via JQuery etc..
+var formData = {product:$('#paypalShapeSizeMetal').val(),quantity:"1"}; 
+ 
+$.ajax({
+	url: '/stock/p_order',   //JSON to waiting PHP controller
+    type: "POST",
+    data : formData,
+    success: function(data, textStatus, jqXHR)
+    {
+    	console.log("Hooray, it worked!");
+        //data - response from server/ignore for right now. This is where AJAX drops you when it is complete. I tend to Redirect the user at this point, or do some cleanup..such as clear the forms etc..
+    },
+    error: function (jqXHR, textStatus, errorThrown)
+    {
+		console.log("No go :(");
+
+    }
+});
+
+/*// variable to hold request
 var request;
 // bind to the submit event of our form
 $('#buy-now').click(function(event){
@@ -54,15 +73,7 @@ $('#buy-now').click(function(event){
 
     // prevent default posting of form
     event.preventDefault();
-});
-
-
-
-
-
-
-
-
+});*/
 
 
 
