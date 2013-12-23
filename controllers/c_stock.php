@@ -114,16 +114,11 @@ class stock_controller extends base_controller {
         list($shape, $size, $metal) = explode( ' ', $product);
         //print $shape. ',' . $size . ',' . $metal;
 
-        // Build the query to get all the products
-        // Find match for $product in the database
-        /*$q = "SELECT *
-            FROM products
-            WHERE shape = '$shape' and size = '$size' and metal = '$metal'";
-
-        $order = DB::instance(DB_NAME)->select_row($q);*/
-
         // "get the value from it's stock field" 
         // the current stock total for the item 
+        //"UPDATE products SET stock = $new_tally WHERE
+
+        // Bug ... sets all stock to zero :( I tried ...
         $q = "SELECT stock FROM products 
             WHERE shape = '".$shape."' 
             AND size = '".$size."' 

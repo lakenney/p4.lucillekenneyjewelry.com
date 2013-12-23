@@ -673,12 +673,8 @@ footer {
 		float:left;
 		width: 100px;
 		padding-right: 20px;
-		border-style: 1px;
-		border-color: #000;
-
-	}
-
-	#products-wrapper #products ul {
+		/*border-style: 1px;
+		border-color: #000;*/
 
 	}
 	
