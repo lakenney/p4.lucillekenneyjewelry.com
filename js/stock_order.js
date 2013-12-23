@@ -7,7 +7,7 @@
 $('#buy-now').click(function() {
 	//JSON Array. You can create this array any way you like. 
 	//Perhaps by grabbing the user's choice via JQuery etc..
-	var formData = {product:$('#paypalShapeSizeMetal').val(),quantity:"1"}; 
+	var formData = {product:$('#paypalShapeSizeMetal').val()}; 
 	 
 	$.ajax({
 		url: '/stock/p_order',   //JSON to waiting PHP controller

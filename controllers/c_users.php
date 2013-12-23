@@ -248,26 +248,6 @@ class users_controller extends base_controller {
 	-------------------------------------------------------------------------------------------------*/
 
     public function login($error = NULL) {
-    	
-    	/* Code for controller specific css and js place in _v 
-        // Create an array for all the client files
-        // Method inside the utilities library to help with this
-        $client_files_head = Array(
-            '/css/master.css'
-        );
-            
-        // Use load_client_files to generate the links from the above array
-        $this->template->client_files_head = Utils::load_client_files($client_files_head);    
-        
-        // Create an array of 1 or many client files to be included before the closing </body> tag
-        $client_files_body = Array(
-            '/js/widgets.min.js',
-            '/js/profile.min.js'
-        );
-            
-        // Use load_client_files to generate the links from the above array
-        $this->template->client_files_body = Utils::load_client_files($client_files_body);
-        */      
  
         // Setup view
         $this->template->content = View::instance('v_users_login');
@@ -415,17 +395,7 @@ class users_controller extends base_controller {
     	// On the fly pass it a variable
     	#$view->user_name = $user_name;
     	//$view->color = "red";
-    	
-    	// You should only ever have one echo in you controllers 
-    	// and that is to echo at the end of the file
-    	#echo $view;
-
-        #if($user_name == NULL) {
-        #    echo "No user specified";
-        #}
-        #else {
-        #    echo "This is the profile for ".$user_name;
-        #}
+        
     }
 
 } # end of the class

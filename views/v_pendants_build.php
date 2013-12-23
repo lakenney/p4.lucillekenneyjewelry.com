@@ -1,14 +1,4 @@
-	<!--<form method='POST' action='/pendants/p_build'>
-    	<label for='content'>Pendants</label><br>
-    	<textarea  cols="53" rows="8" name='content' id='content'></textarea>
-    
-    		<div id='results'></div>
-
-    	<input type='submit' value='Pendant'>
-
-	</form>
-
-    <br>-->
+<!-- BUILD A PENDANT PAGE with paypal form -->
 	<!--css-->
 	<link rel="stylesheet" href="/build-a-pendant/css/main.css" type="text/css">
 	<link rel="stylesheet" href="/build-a-pendant/css/features.css" type="text/css">

@@ -7,6 +7,7 @@ Susan Buck
 Dynamic Web Development
 Harvard Extension
 Submitted 6 Dec 2013
+and updated for Final Project
 
 -------------------------------------------------------------------------------------------------*/	
 // Set document ready

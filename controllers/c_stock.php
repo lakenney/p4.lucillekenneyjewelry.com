@@ -142,7 +142,7 @@ class stock_controller extends base_controller {
         }
         
         $new_tally = Array (
-            'stock' => '$current_stock',
+            'stock' => $current_stock,
         );
 
         //and use the DB update method to update the stock for the item. 
