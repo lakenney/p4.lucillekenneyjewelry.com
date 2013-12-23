@@ -116,11 +116,11 @@ class stock_controller extends base_controller {
 
         // Build the query to get all the products
         // Find match for $product in the database
-        $q = "SELECT *
+        /*$q = "SELECT *
             FROM products
             WHERE shape = '$shape' and size = '$size' and metal = '$metal'";
 
-        $order = DB::instance(DB_NAME)->select_row($q);
+        $order = DB::instance(DB_NAME)->select_row($q);*/
 
         // "get the value from it's stock field" 
         // the current stock total for the item 
@@ -128,7 +128,7 @@ class stock_controller extends base_controller {
             WHERE shape = '".$shape."' 
             AND size = '".$size."' 
             AND metal ='".$metal."'"; 
-         
+
         $current_stock = DB::instance(DB_NAME)->select_field($q); 
 
         //"if it's zero, make a note to admin to back order, 
@@ -142,7 +142,7 @@ class stock_controller extends base_controller {
         }
         
         $new_tally = Array (
-            'stock' => $current_stock,
+            'stock' => '$current_stock',
         );
 
         //and use the DB update method to update the stock for the item. 

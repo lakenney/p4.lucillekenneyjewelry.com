@@ -15,7 +15,7 @@ $('#buy-now').click(function() {
 	    data : formData,
 	    success: function(data, textStatus, jqXHR)
 	    {
-	    	console.log("Hooray, it worked!");
+	    	//console.log("Hooray, it worked!");
 	        //data - response from server/ignore for right now. 
 	        //This is where AJAX drops you when it is complete. 
 	        //I tend to Redirect the user at this point, or do some cleanup..
