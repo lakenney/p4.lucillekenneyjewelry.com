@@ -80,7 +80,7 @@ class stock_controller extends base_controller {
    /*-------------------------------------------------------------------------------------------------
     ORDER
     -------------------------------------------------------------------------------------------------*/
-    /*public function order() {
+    public function order() {
 
         // Setup view
            // $this->template->content = View::instance('v_pendants_build');
@@ -95,7 +95,7 @@ class stock_controller extends base_controller {
         // Render template
              //echo $this->template;
 
-    }*/
+    }
 
     /*-------------------------------------------------------------------------------------------------
     Process ORDER

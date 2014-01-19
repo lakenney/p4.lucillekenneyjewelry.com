@@ -13,7 +13,9 @@
 		<!-- Left side with all the controls -->
 		<div id='controls'>
 			<p class='intro-para'>
-				Let hand stamped words on the elegant beauty of fine silver or bronze carry a message of love and inspiration to someone special.
+				Let hand stamped words on the elegant beauty of fine silver or bronze carry a message of love and inspiration to someone special. 
+				The charm of hand stamping is its random organic look, not precise or machine made. 
+			
 			</P>
 				<hr>
 					<h2>Pick a shape</h2>
@@ -73,7 +75,7 @@
 					<div id='canvas'>
 						<div id='pendant-container'>
 							<div id='pendant'>
-								<img src='/build-a-pendant/images/circle-md-silver.png' width="101" height="101" alt="Medium Round Silver Pendant blank">
+								<img src='/build-a-pendant/images/circle-md-silver.png' width="101" height="101" alt="Medium Round Silver Pendant blank default">
 							</div><!--end pendant-->
 						</div><!--end pendant-container-->
 						
@@ -108,6 +110,11 @@
 		<input type="hidden" name="item_name" id="paypalShapeSizeMetal" value="circle md silver">
 
 		<!--<input type="hidden" name="on0" id='paypalMessage' value="LUV">-->
+
+		<input type="hidden" name="on0" id="paypalMessage" value="paypalMessage">
+		<!--paypalMessage<input type="text" name="os0" maxlength="200">-->
+
+
 
 		<input type="hidden" name="item_number" id="pendant" value="pendant">
 		<input type="hidden" name="amount" id="paypalPrice" value="94.39">

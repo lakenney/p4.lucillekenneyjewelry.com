@@ -58,7 +58,7 @@ $(document).ready(function() {
 	function printCost(shape,size,metal) {
 			
 		// Nested if statements to determine cost for shape, size and metals
-		var silver_price_grm = 2.22;
+		var silver_price_grm = 2.80;
 		var bronze_price_grm = .25;
 
 		// CIRCLE
@@ -92,12 +92,12 @@ $(document).ready(function() {
 			//(pendantCost for large silver circle
 			else if (size =="lg") {
 				if (metal == "silver") {
-					var lg_circle_weight_grm = 56.7;
+					var lg_circle_weight_grm = 6;
 					pendantCost = silver_price_grm * lg_circle_weight_grm;
 				} 
 				//(pendantCost for large bronze circle
 				else if (metal == "bronze") {
-					var lg_circle_weight_grm = 62.36;
+					var lg_circle_weight_grm = 6;
 					pendantCost = bronze_price_grm * lg_circle_weight_grm;
 				}
 			}
@@ -133,12 +133,12 @@ $(document).ready(function() {
 			//(pendantCost for large silver square
 			else if (size =="lg") {
 				if (metal == "silver") {
-					var lg_square_weight_grm = 65.205;
+					var lg_square_weight_grm = 6;
 					pendantCost = silver_price_grm * lg_square_weight_grm;
 				} 
 				//(pendantCost for large bronze square
 				else if (metal == "bronze") {
-					var lg_square_weight_grm = 70.875;
+					var lg_square_weight_grm = 6;
 					pendantCost = bronze_price_grm * lg_square_weight_grm;
 				}
 			}
@@ -172,12 +172,12 @@ $(document).ready(function() {
 			//(pendantCost for large silver heart
 			else if (size =="lg") {
 				if (metal == "silver") {
-					var lg_heart_weight_grm = 70.88;
+					var lg_heart_weight_grm = 6;
 					pendantCost = silver_price_grm * lg_heart_weight_grm;
 				}
 				//(pendantCost for large silver heart
 				else if (metal == "bronze") {
-					var lg_heart_weight_grm = 76.55;
+					var lg_heart_weight_grm = 6;
 					pendantCost = bronze_price_grm * lg_heart_weight_grm;	
 				}
 			}
@@ -227,22 +227,22 @@ $(document).ready(function() {
 			if (size == "sm") {
 				// Max amount of 12pt characters that fit in the small circle
 				if (fontsize == "12") {
-					maxMessageLength = 8;
-					$("#message").attr("maxlength","8");
+					maxMessageLength = 6;
+					$("#message").attr("maxlength","6");
 					// Save new message
 				}
 				// Max amount of 24pt characters that fit in the small circle
 				else if (fontsize == "24") {
-					maxMessageLength = 4;
-					$("#message").attr("maxlength","4");
+					maxMessageLength = 3;
+					$("#message").attr("maxlength","3");
 				}
 			} 
 
 			else if (size == "md") {
 				// Max amount of 12pt characters that fit in the medium circle
 				if (fontsize == "12") {
-					maxMessageLength = 12;
-					$("#message").attr("maxlength","12");
+					maxMessageLength = 10;
+					$("#message").attr("maxlength","10");
 				} 
 				// Max amount of 24pt characters that fit in the medium circle
 				else if (fontsize == "24") {
@@ -254,13 +254,13 @@ $(document).ready(function() {
 			else if (size == "lg") {
 				// Max amount of 12pt characters that fit in the large circle
 				if (fontsize == "12") {
-					maxMessageLength = 14;
-					$("#message").attr("maxlength","14");
+					maxMessageLength = 13;
+					$("#message").attr("maxlength","13");
 				}
 				// Max amount of 24pt characters that fit in the large circle
 				else if (fontsize == "24") {
-					maxMessageLength = 9;
-					$("#message").attr("maxlength","9");
+					maxMessageLength = 8;
+					$("#message").attr("maxlength","8");
 				}
 			}
 		} 
@@ -369,7 +369,7 @@ $(document).ready(function() {
 	function calcMessage() {
 
 		// Find out what is in the field
-	    var value = $('#message').val();
+	    var value = $('#message').val().toUpperCase();
 	    //console.log(value);
 
 	    // How many characters did the user type in
@@ -400,10 +400,10 @@ $(document).ready(function() {
 
 		// Pass the message to paypal form
 		//$('#paypalMessage').val(message-output.toString());
-		//$('#paypalMessage').val(message-output);
+		//$('#paypalMessage').html(message-output);
+		$('#paypalMessage').val(value);
 
 	};
-
 
 	/*-------------------------------------------------------------------------------------------------
 	Message
