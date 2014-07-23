@@ -92,12 +92,12 @@ $(document).ready(function() {
 			//(pendantCost for large silver circle
 			else if (size =="lg") {
 				if (metal == "silver") {
-					var lg_circle_weight_grm = 6;
+					var lg_circle_weight_grm =50;
 					pendantCost = silver_price_grm * lg_circle_weight_grm;
 				} 
 				//(pendantCost for large bronze circle
 				else if (metal == "bronze") {
-					var lg_circle_weight_grm = 6;
+					var lg_circle_weight_grm = 55;
 					pendantCost = bronze_price_grm * lg_circle_weight_grm;
 				}
 			}
@@ -133,12 +133,12 @@ $(document).ready(function() {
 			//(pendantCost for large silver square
 			else if (size =="lg") {
 				if (metal == "silver") {
-					var lg_square_weight_grm = 6;
+					var lg_square_weight_grm = 50;
 					pendantCost = silver_price_grm * lg_square_weight_grm;
 				} 
 				//(pendantCost for large bronze square
 				else if (metal == "bronze") {
-					var lg_square_weight_grm = 6;
+					var lg_square_weight_grm = 55;
 					pendantCost = bronze_price_grm * lg_square_weight_grm;
 				}
 			}
@@ -172,12 +172,12 @@ $(document).ready(function() {
 			//(pendantCost for large silver heart
 			else if (size =="lg") {
 				if (metal == "silver") {
-					var lg_heart_weight_grm = 6;
+					var lg_heart_weight_grm = 50;
 					pendantCost = silver_price_grm * lg_heart_weight_grm;
 				}
 				//(pendantCost for large silver heart
 				else if (metal == "bronze") {
-					var lg_heart_weight_grm = 6;
+					var lg_heart_weight_grm = 55;
 					pendantCost = bronze_price_grm * lg_heart_weight_grm;	
 				}
 			}
