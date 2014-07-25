@@ -53,7 +53,7 @@ $(document).ready(function() {
 	 });
 
 	/*-------------------------------------------------------------------------------------------------
-	Calculate pendant cost according to shape, size and metal
+	Calculate pendant cost according to shape, size and metal ... changed to hard coded
 	-------------------------------------------------------------------------------------------------*/
 	function printCost(shape,size,metal) {
 			
@@ -66,39 +66,33 @@ $(document).ready(function() {
 			//(pendantCost for small silver circle
 			if (size == "sm") {
 				if (metal == "silver") {
-					var sm_circle_weight_grm = 14.18;
-					pendantCost = silver_price_grm * sm_circle_weight_grm;
+					pendantCost = 20;
 				} 
 				//(pendantCost for small bronze circle
 				else if (metal == "bronze") {
-					var sm_circle_weight_grm = 28.35;
-					pendantCost = bronze_price_grm * sm_circle_weight_grm;
+					pendantCost = 12;
 				}
 			} 
 
 			//(pendantCost for medium silver circle
 			else if (size == "md") {
 				if (metal == "silver") {
-					var md_circle_weight_grm = 42.52;
-					pendantCost = silver_price_grm * md_circle_weight_grm;
+					pendantCost = 25;
 				} 
 				//(pendantCost for medium bronze circle
 				else if (metal == "bronze") {
-					var md_circle_weight_grm = 51.03;
-					pendantCost = bronze_price_grm * md_circle_weight_grm;	
+					pendantCost = 15;	
 				}
 			} 
 
 			//(pendantCost for large silver circle
 			else if (size =="lg") {
 				if (metal == "silver") {
-					var lg_circle_weight_grm =50;
-					pendantCost = silver_price_grm * lg_circle_weight_grm;
+					pendantCost = 30;
 				} 
 				//(pendantCost for large bronze circle
 				else if (metal == "bronze") {
-					var lg_circle_weight_grm = 55;
-					pendantCost = bronze_price_grm * lg_circle_weight_grm;
+					pendantCost = 18;
 				}
 			}
 		} 
@@ -107,39 +101,33 @@ $(document).ready(function() {
 		else if (shape == "square") {
 			if(size == "sm") {
 				if (metal == "silver") {
-					var sm_square_weight_grm = 36.855;
-					pendantCost = silver_price_grm * sm_square_weight_grm;
+					pendantCost = 20;
 				} 
 				//(pendantCost for small bronze square
 				else if (metal == "bronze") {
-					var sm_square_weight_grm = 42.525;
-					pendantCost = bronze_price_grm * sm_square_weight_grm;
+					pendantCost = 12;
 				}
 			} 
 
 			//(pendantCost for medium silver square
 			else if (size == "md") {
 				if (metal == "silver") {
-					var md_square_weight_grm = 51.03;
-					pendantCost = silver_price_grm * md_square_weight_grm;
+					pendantCost = 25;
 				} 
 				//(pendantCost for medium bronze square
 				else if (metal == "bronze") {
-					var md_square_weight_grm = 59.535;
-					pendantCost = bronze_price_grm * md_square_weight_grm;
+					pendantCost = 15;
 				}
 			}
 
 			//(pendantCost for large silver square
 			else if (size =="lg") {
 				if (metal == "silver") {
-					var lg_square_weight_grm = 50;
-					pendantCost = silver_price_grm * lg_square_weight_grm;
+					pendantCost = 30;
 				} 
 				//(pendantCost for large bronze square
 				else if (metal == "bronze") {
-					var lg_square_weight_grm = 55;
-					pendantCost = bronze_price_grm * lg_square_weight_grm;
+					pendantCost = 18;
 				}
 			}
 		} 
@@ -148,37 +136,31 @@ $(document).ready(function() {
 			//(pendantCost for small silver heart
 			if(size == "sm") {
 				if (metal == "silver") {
-					var sm_heart_weight_grm = 42.53;
-					pendantCost = silver_price_grm * sm_heart_weight_grm;
+					pendantCost = 20;
 				} 
 				//(pendantCost for small bronze heart
 				else if (metal == "bronze") {
-					var sm_heart_weight_grm = 48.2;
-					pendantCost = bronze_price_grm * sm_heart_weight_grm;				
+					pendantCost = 12;				
 				}
 			} 
 			//(pendantCost for medium silver heart
 			else if (size == "md") {
 				if (metal == "silver") {
-					var md_heart_weight_grm = 56.7;
-					pendantCost = silver_price_grm * md_heart_weight_grm;				
+					pendantCost = 25;				
 				} 
 				//(pendantCost for medium bronze heart
 				else if (metal == "bronze") {
-					var md_heart_weight_grm = 62.37;
-					pendantCost = bronze_price_grm * md_heart_weight_grm;					
+					pendantCost = 15;					
 				}
 			}
 			//(pendantCost for large silver heart
 			else if (size =="lg") {
 				if (metal == "silver") {
-					var lg_heart_weight_grm = 50;
-					pendantCost = silver_price_grm * lg_heart_weight_grm;
+					pendantCost = 30;
 				}
-				//(pendantCost for large silver heart
+				//(pendantCost for large bronze heart
 				else if (metal == "bronze") {
-					var lg_heart_weight_grm = 55;
-					pendantCost = bronze_price_grm * lg_heart_weight_grm;	
+					pendantCost = 18;	
 				}
 			}
 		}
@@ -227,40 +209,40 @@ $(document).ready(function() {
 			if (size == "sm") {
 				// Max amount of 12pt characters that fit in the small circle
 				if (fontsize == "12") {
-					maxMessageLength = 6;
-					$("#message").attr("maxlength","6");
+					maxMessageLength = 2;
+					$("#message").attr("maxlength","2");
 					// Save new message
 				}
 				// Max amount of 24pt characters that fit in the small circle
 				else if (fontsize == "24") {
-					maxMessageLength = 3;
-					$("#message").attr("maxlength","3");
+					maxMessageLength = 1;
+					$("#message").attr("maxlength","1");
 				}
 			} 
 
 			else if (size == "md") {
 				// Max amount of 12pt characters that fit in the medium circle
 				if (fontsize == "12") {
-					maxMessageLength = 10;
-					$("#message").attr("maxlength","10");
+					maxMessageLength = 3;
+					$("#message").attr("maxlength","3");
 				} 
 				// Max amount of 24pt characters that fit in the medium circle
 				else if (fontsize == "24") {
-					maxMessageLength = 6;
-					$("#message").attr("maxlength","6");
+					maxMessageLength = 2;
+					$("#message").attr("maxlength","2");
 				}
 			} 
 
 			else if (size == "lg") {
 				// Max amount of 12pt characters that fit in the large circle
 				if (fontsize == "12") {
-					maxMessageLength = 13;
-					$("#message").attr("maxlength","13");
+					maxMessageLength = 4;
+					$("#message").attr("maxlength","4");
 				}
 				// Max amount of 24pt characters that fit in the large circle
 				else if (fontsize == "24") {
-					maxMessageLength = 8;
-					$("#message").attr("maxlength","8");
+					maxMessageLength = 3;
+					$("#message").attr("maxlength","3");
 				}
 			}
 		} 
@@ -269,39 +251,39 @@ $(document).ready(function() {
 			if (size == "sm") {
 				// Max amount of 12pt characters that fit in the small square
 				if (fontsize == "12") {
-					maxMessageLength = 9;
-					$("#message").attr("maxlength","9");
+					maxMessageLength = 2;
+					$("#message").attr("maxlength","2");
 				} 
 				// Max amount of 24pt characters that fit in the small square
 				else if (fontsize == "24") {
-					maxMessageLength = 4;
-					$("#message").attr("maxlength","4");
+					maxMessageLength = 1;
+					$("#message").attr("maxlength","1");
 				}
 			} 
 
 			else if (size == "md") {
 				// Max amount of 12pt characters that fit in the medium square
 				if (fontsize == "12") {
-					maxMessageLength = 12;
-					$("#message").attr("maxlength","12");
+					maxMessageLength = 3;
+					$("#message").attr("maxlength","3");
 				} 
 				// Max amount of 24pt characters that fit in the medium square
 				else if (fontsize == "24") {
-					maxMessageLength = 6;
-					$("#message").attr("maxlength","6");
+					maxMessageLength = 2;
+					$("#message").attr("maxlength","2");
 				}
 			} 
 
 			else if (size == "lg") {
 				// Max amount of 12pt characters that fit in the large square
 				if (fontsize == "12") {
-					maxMessageLength = 14;
-					$("#message").attr("maxlength","14");
+					maxMessageLength = 4;
+					$("#message").attr("maxlength","4");
 				} 
 				// Max amount of 24pt characters that fit in the large square
 				else if (fontsize == "24") {
-					maxMessageLength = 8;
-					$("#message").attr("maxlength","8");
+					maxMessageLength = 3;
+					$("#message").attr("maxlength","3");
 				}
 			}
 		} 
@@ -310,39 +292,39 @@ $(document).ready(function() {
 			if (size == "sm") {
 				// Max amount of 12pt characters that fit in the small heart
 				if (fontsize == "12") {
-					maxMessageLength = 8;
-					$("#message").attr("maxlength","8");
+					maxMessageLength = 2;
+					$("#message").attr("maxlength","2");
 				} 
 				// Max amount of 24pt characters that fit in the small heart
 				else if (fontsize == "24") {
-					maxMessageLength = 4;
-					$("#message").attr("maxlength","4");
+					maxMessageLength = 1;
+					$("#message").attr("maxlength","1");
 				}
 			} 
 
 			else if (size == "md") {
 				// Max amount of 12pt characters that fit in the medium heart
 				if (fontsize == "12") {
-					maxMessageLength = 11;
-					$("#message").attr("maxlength","11");
+					maxMessageLength = 3;
+					$("#message").attr("maxlength","3");
 				}
 				// Max amount of 24pt characters that fit in the medium heart
 				else if (fontsize == "24") {
-					maxMessageLength = 5;
-					$("#message").attr("maxlength","5");
+					maxMessageLength = 1;
+					$("#message").attr("maxlength","1");
 				}
 			} 
 
 			else if (size == "lg") {
 				// Max amount of 12pt characters that fit in the large heart
 				if (fontsize == "12") {
-					maxMessageLength = 16;
-					$("#message").attr("maxlength","16");
+					maxMessageLength = 3;
+					$("#message").attr("maxlength","3");
 				}
 				// Max amount of 24pt characters that fit in the large heart
 				else if (fontsize == "24") {
-					maxMessageLength = 9;
-					$("#message").attr("maxlength","9");
+					maxMessageLength = 2;
+					$("#message").attr("maxlength","2");
 				}
 			}
 		} 
@@ -383,8 +365,8 @@ $(document).ready(function() {
 	   	if(how_many_left == 0) {
 	    	$('#message-error').css('color', 'red');
 	    }
-	    // If number of characters left is less than 3 turn it orange
-	    else if(how_many_left < 3){
+	    // If number of characters left is less than 2 turn it orange
+	    else if(how_many_left < 2){
 	    	$('#message-error').css('color', 'orange');
 	    }
 	    else {

@@ -44,7 +44,7 @@
 						<input type="radio" name="size" value="md" checked>md
 						<input type="radio" name="size" value="lg">lg
 	                    <br><br>
-							This pendant costs: $<span id='output'>94.39</span>
+							This pendant costs: $<span id='output'>25.00</span>
 						<br><br>
 
 			<!-- Message -->	
