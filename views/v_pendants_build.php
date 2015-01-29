@@ -75,7 +75,7 @@
 					<div id='canvas'>
 						<div id='pendant-container'>
 							<div id='pendant'>
-								<img src='/build-a-pendant/images/circle-md-silver.png' width="101" height="101" alt="Medium Round Silver Pendant blank default">
+								<img src='/build-a-pendant/images/circle-md-silver.png' width="" height="" alt="Medium Round Silver Pendant blank default">
 							</div><!--end pendant-->
 						</div><!--end pendant-container-->
 						

@@ -318,8 +318,8 @@ $(document).ready(function() {
 			else if (size == "lg") {
 				// Max amount of 12pt characters that fit in the large heart
 				if (fontsize == "12") {
-					maxMessageLength = 3;
-					$("#message").attr("maxlength","3");
+					maxMessageLength = 4;
+					$("#message").attr("maxlength","4");
 				}
 				// Max amount of 24pt characters that fit in the large heart
 				else if (fontsize == "24") {
